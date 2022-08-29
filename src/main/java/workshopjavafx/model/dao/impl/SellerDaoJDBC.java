@@ -30,7 +30,7 @@ public class SellerDaoJDBC implements SellerDao {
             st.setString(2, obj.getEmail());
             st.setDate(3,new java.sql.Date(obj.getBirthDate().getTime()));
             st.setDouble(4,obj.getBaseSalary());
-            st.setInt(5,obj.getId());
+            st.setInt(5,obj.getDepartment().getId());
 
             int rowsAffected = st.executeUpdate();
             if (rowsAffected > 0){
